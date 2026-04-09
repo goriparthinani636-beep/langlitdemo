@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Panel</title>
+
+<style>
+body { font-family: Arial; background:#f2f2f2; margin:0; padding:20px; }
+h2 { text-align:center; color:#333; margin-bottom:30px; }
+h3 { margin-top:40px; text-align:center; color:#444; }
+
+form, .pdf-list, .event-list {
+max-width:900px;
+margin:20px auto;
+background:#fff;
+padding:20px;
+border-radius:8px;
+box-shadow:0 4px 12px rgba(0,0,0,0.1);
+}
+
+input[type="file"], input[type="text"], textarea {
+width:100%;
+padding:10px;
+margin-bottom:15px;
+border:1px solid #ddd;
+border-radius:5px;
+}
+
+button {
+padding:10px 20px;
+background:#4CAF50;
+border:none;
+color:white;
+border-radius:6px;
+cursor:pointer;
+font-size:16px;
+}
+
+button:hover { background:#45a049; }
+
+/* Buttons */
+.actions a{
+margin-right:6px;
+text-decoration:none;
+color:white;
+padding:6px 10px;
+border-radius:4px;
+font-size:13px;
+display:inline-block;
+}
+
+.btn-download { background:#2196F3; }
+.btn-view { background:#FF9800; }
+.btn-delete { background:#f44336; }
+.btn-add { background:#4CAF50; }
+.btn-delete-photo {
+background:#f44336;
+font-size:11px;
+padding:2px 5px;
+position:absolute;
+top:0;
+right:0;
+}
+
+.logout-link {
+display:block;
+text-align:center;
+margin-top:25px;
+text-decoration:none;
+color:#555;
+font-weight:bold;
+}
+
+/* Event cards */
+.event-list .card{
+padding:15px;
+margin-bottom:15px;
+border-radius:6px;
+box-shadow:0 2px 6px rgba(0,0,0,0.08);
+}
+
+.content{
+display:flex;
+gap:10px;
+}
+
+.content img{
+width:100px;
+height:70px;
+object-fit:cover;
+border-radius:4px;
+}
+
+.images{
+margin-top:10px;
+display:flex;
+flex-wrap:wrap;
+gap:6px;
+}
+
+.image-card{
+position:relative;
+}
+
+.image-card img{
+width:70px;
+height:50px;
+object-fit:cover;
+border-radius:4px;
+}
+
+.update-description textarea{
+width:100%;
+}
+</style>
+</head>
+
+<body>
+
+<h2>Admin Panel</h2>
+
+<!-- Upload PDF -->
+<h3>Upload PDF</h3>
+<form method="POST" enctype="multipart/form-data">
+<input type="file" name="pdf" accept=".pdf" required>
+<button type="submit">Upload</button>
+</form>
+
+<!-- PDF List -->
+<div class="pdf-list">
+{% for pdf in pdfs %}
+<div class="card">
+<div>{{ pdf }}</div>
+
+<div class="actions">
+<a href="{{ url_for('view_pdf', filename=pdf) }}" class="btn-view" target="_blank">View</a>
+<a href="{{ url_for('download_pdf', filename=pdf) }}" class="btn-download">Download</a>
+<a href="{{ url_for('delete_pdf', filename=pdf) }}" class="btn-delete">Delete</a>
+</div>
+
+</div>
+{% endfor %}
+</div>
+
+
+<!-- EVENT SECTION -->
+<h3>Event Photos</h3>
+
+<div class="event-list">
+
+{% for event in events %}
+<div class="card">
+
+<div class="content">
+
+{% if event.default %}
+<img src="{{ url_for('static', filename='photos/' + event.folder + '/' + event.default) }}">
+{% endif %}
+
+<div>
+<strong>{{ event.title }}</strong><br>
+<em>{{ event.description or 'No description yet' }}</em><br>
+Total Photos: {{ event.images|length }}
+</div>
+
+</div>
+
+<!-- All photos -->
+<div class="images">
+{% for img in event.images %}
+<div class="image-card">
+
+<img src="{{ url_for('static', filename='photos/' + event.folder + '/' + img) }}">
+
+<div style="display:flex;gap:2px;margin-top:2px;">
+
+<a href="{{ url_for('set_default_photo',
+folder=event.folder,
+filename=img) }}"
+style="background:#4CAF50;color:white;padding:2px 4px;font-size:10px;text-decoration:none;border-radius:3px;">
+Main
+</a>
+
+<a href="{{ url_for('delete_photo',
+folder=event.folder,
+filename=img) }}"
+class="btn-delete-photo">
+🗑
+</a>
+
+</div>
+{% endfor %}
+</div>
+
+<!-- Actions -->
+<div class="actions" style="margin-top:10px;">
+
+<a href="{{ url_for('event_photos',
+folder=event.folder) }}"
+class="btn-view">
+View All
+</a>
+
+<a href="{{ url_for('add_photos_to_event',
+event_name=event.folder) }}"
+class="btn-add">
+Add Photos
+</a>
+
+<a href="{{ url_for('delete_event',
+folder=event.folder) }}"
+class="btn-delete"
+onclick="return confirm('Delete entire event?')">
+Delete Event
+</a>
+
+</div>
+
+<!-- Update description -->
+<div class="update-description">
+
+<form action="{{ url_for('update_description',
+folder=event.folder) }}"
+method="POST">
+
+<textarea name="description"
+rows="3"
+placeholder="Update description">{{ event.description }}</textarea>
+
+<button type="submit">Update Description</button>
+
+</form>
+
+</div>
+
+</div>
+{% endfor %}
+
+
+<!-- Create new event -->
+<div style="text-align:center;margin-top:20px;">
+<a href="{{ url_for('create_event') }}" class="btn-add">
+Upload New Event
+</a>
+</div>
+
+</div>
+
+
+<a href="{{ url_for('logout') }}" class="logout-link">
+Logout
+</a>
+
+</body>
+</html>

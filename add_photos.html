@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Upload Event Photos</title>
+<style>
+body { font-family: Arial; background:#f2f2f2; padding:20px; }
+form { max-width:600px; margin:20px auto; background:#fff; padding:20px; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.1); }
+input[type="text"], textarea, input[type="file"] { width:100%; padding:8px; margin-bottom:15px; }
+button { padding:10px 20px; background:#4CAF50; color:white; border:none; border-radius:6px; cursor:pointer; }
+button:hover { background:#45a049; }
+</style>
+</head>
+<body>
+
+<h2>Upload Event Photos</h2>
+
+<form method="POST" enctype="multipart/form-data">
+    <label>Event Name:</label>
+    <input type="text" name="event_name" placeholder="Enter event name" required>
+
+    <label>Event Description:</label>
+    <textarea name="description" rows="4" placeholder="Enter event description"></textarea>
+
+    <label>Upload Photos:</label>
+    <input type="file" name="photos" multiple accept=".jpg,.jpeg,.png" required>
+
+    <button type="submit">Upload Event</button>
+</form>
+
+<a href="{{ url_for('admin_panel') }}" style="display:block; text-align:center; margin-top:20px;">⬅ Back to Admin Panel</a>
+
+</body>
+</html>

@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> LangLit </title>
+    <!-- favicons Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='images/favicons/favicon.png') }}" />
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='images/favicons/favicon.png') }}" />
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='images/favicons/favicon.png') }}" />
+    <link rel="manifest" href="{{ url_for('static', filename='images/favicons/site.webmanifest') }}" />
+    <meta name="description" content="#" />
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/animate.min.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/custom-animate.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/swiper.min.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/font-awesome-all.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/jquery.magnific-popup.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/odometer.min.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/flaticon.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/owl.carousel.min.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/owl.theme.default.min.css') }}" />
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/fancybox.min.css') }}" />
+
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/module-css/slider.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/module-css/footer.css') }}" />
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/module-css/about.css') }}" /> -->
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/module-css/found.css') }}" /> -->
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/module-css/donate.css') }}" /> -->
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/module-css/who-we-are.css') }}" /> -->
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/module-css/event.css') }}" /> -->
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/module-css/country.css') }}" /> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/module-css/cta.css') }}" />
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/module-css/testimonial.css') }}" /> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/module-css/contact.css') }}" />
+
+
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/module-css/page-header.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/module-css/footer.css') }}" />
+
+    <!-- template styles -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/responsive.css') }}" />
+    <style>
+/* Container Grid */
+.pdf-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Card Design */
+.pdf-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 20px;
+  border: 2px solid #f0f0f0;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hover Effect */
+.pdf-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+  border-color: #007bff;
+}
+
+/* PDF Name */
+.pdf-name {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 15px;
+  word-break: break-word;
+}
+
+/* Button Container */
+.pdf-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* Base Button Style */
+.pdf-actions a {
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: 500;
+  color: white;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+/* View Button (Green) */
+.btn-view {
+  background: linear-gradient(45deg, #28a745, #34d058);
+}
+
+.btn-view:hover {
+  background: linear-gradient(45deg, #218838, #2ecc71);
+  transform: scale(1.1);
+}
+
+/* Download Button (Orange) */
+.btn-download {
+  background: linear-gradient(45deg, #ff9800, #ffb74d);
+}
+
+.btn-download:hover {
+  background: linear-gradient(45deg, #e68900, #ffa726);
+  transform: scale(1.1);
+}
+
+/* Delete Button (Red) */
+.btn-delete {
+  background: linear-gradient(45deg, #dc3545, #ff6b6b);
+}
+
+.btn-delete:hover {
+  background: linear-gradient(45deg, #c82333, #ff4d4d);
+  transform: scale(1.1);
+}
+
+/* Upload Button (Blue Link) */
+a[href*="admin_panel"] {
+  display: inline-block;
+  padding: 10px 18px;
+  background: linear-gradient(45deg, #007bff, #3399ff);
+  color: white;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+a[href*="admin_panel"]:hover {
+  background: linear-gradient(45deg, #0056b3, #1a8cff);
+  transform: scale(1.05);
+}
+
+/* Empty Message */
+p {
+  text-align: center;
+  font-size: 16px;
+  color: #777;
+}
+
+/* Smooth Fade-in Animation */
+.pdf-card {
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+    </style>
+</head>
+
+<body class="custom-cursor">
+
+
+
+
+    <div class="custom-cursor__cursor"></div>
+    <div class="custom-cursor__cursor-two"></div>
+
+    <div class="preloader">
+        <div class="preloader__image"></div>
+    </div>
+    <!-- /.preloader -->
+
+
+
+
+
+    <div class="page-wrapper">
+        <header class="main-header">
+            <div class="main-menu__top">
+                <div class="container">
+                    <div class="main-menu__top-inner">
+                        <div class="main-menu__social-box">
+                            <p class="main-menu__social-title">Follow Us On:</p>
+                            <div class="main-menu__social">
+                                <a href="#"><i class="icon-facebook"></i></a>
+                                <a href="#"><i class="icon-twitter"></i></a>
+                                <a href="#"><i class="icon-link-in"></i></a>
+                                <a href="#"><i class="icon-instagram"></i></a>
+                            </div>
+                        </div>
+                        <div class="main-menu__top-right">
+                            <ul class="list-unstyled main-menu__contact-list">
+                                <li>
+                                    <div class="icon">
+                                        <i class="icon-envelope"></i>
+                                    </div>
+                                    <div class="text">
+                                        <p><a href="mailto:drpradeeppilli@gmail.com">drpradeeppilli@gmail.com</a>
+                                        </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="icon">
+                                        <i class="icon-call"></i>
+                                    </div>
+                                    <div class="text">
+                                        <p><a href="tel:+919676321770">+91-7989647139</a></p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <nav class="main-menu">
+                <div class="main-menu__wrapper">
+                    <div class="container">
+                        <div class="main-menu__wrapper-inner">
+                            <div class="main-menu__left">
+                                <div class="main-menu__logo">
+                                    <a href="index.php"><img src="assets/images/leftlogo.png" alt=""></a>
+                                </div>
+                                <div class="main-menu__main-menu-box">
+                                    <a href="#" class="mobile-nav__toggler d-block d-md-none"><i
+                                            class="fa fa-bars"></i></a>
+                                   <ul class="main-menu__list">
+                                        <li><a href="{{ url_for('home') }}">Home</a></li>
+                                        <li><a href="{{ url_for('about') }}">About Us</a></li>
+                                        <li><a href="{{ url_for('publication_policy') }}">Publication Policy</a></li>
+                                        <li><a href="{{ url_for('pdfs') }}">View Pdf</a></li>
+                                        <li><a href="{{ url_for('previous_issues') }}">Previous Issues</a></li>
+                                        <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
+                                        <li><a href="{{ url_for('events') }}">Photos</a></li>
+                                        
+                                    </ul>                          
+                                </div>
+                            </div>
+                            
+
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+
+{% if pdfs %}
+<div class="pdf-grid">
+  {% for pdf in pdfs %}
+  <div class="pdf-card">
+    
+    <div class="pdf-name">{{ pdf }}</div>
+    
+    <div class="pdf-actions">
+      <a href="{{ url_for('view_pdf', filename=pdf) }}" target="_blank" class="btn-view">View</a>
+      <a href="{{ url_for('download_pdf', filename=pdf) }}" class="btn-download">Download</a>
+      
+      {% if is_admin %}
+      <a href="{{ url_for('delete_pdf', filename=pdf) }}" class="btn-delete">Delete</a>
+      {% endif %}
+    </div>
+
+  </div>
+  {% endfor %}
+</div>
+{% else %}
+<p>No PDFs uploaded yet.</p>
+{% endif %}
+
+{% if is_admin %}
+<div style="margin-top:20px;">
+  <a href="{{ url_for('admin_panel') }}">⬆ Upload New PDF</a>
+</div>
+{% endif %}
+
+
+
+
+  <!--Site Footer Start-->
+<footer class="site-footer">
+
+    <div class="site-footer__top">
+        <div class="container">
+            <div class="site-footer__top-inner">
+                <div class="row">
+                    <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="100ms">
+                        <div class="footer-widget__about">
+                            <div class="footer-widget__about-logo main-menu1">
+                                <a href="home.html"><img src="assets/images/f1-logo.png" alt=""></a>
+                            </div>
+                            <p class="footer-widget__about-text">
+                                LangLit blends with excellence. We nurture
+                                young learners in a setting that fosters creativity, critical thinking, and holistic
+                                development.
+                            </p>
+                            <div class="site-footer__social">
+                                <a href="#"><i class="icon-facebook"></i></a>
+                                <a href="#"><i class="icon-twitter"></i></a>
+                                <a href="#"><i class="icon-instagram"></i></a>
+                                <a href="#"><i class="icon-pintarest"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp offset-1" data-wow-delay="300ms">
+                        <div class="footer-widget__links">
+                            <h4 class="footer-widget__title">Links</h4>
+                            <ul class="footer-widget__services-list list-unstyled">
+                                <li><a href="about.html">About Us</a></li>
+                                <li><a href="Publication-policy.html">Publication Policy</a></li>
+                                <li><a href="events.html">Events</a></li>
+                                <li><a href="previous-issuse.html">Previous Issuse</a></li>
+                                <li><a href="contact.html">Contact Us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="400ms">
+                        <div class="footer-widget__contact">
+                            <h3 class="footer-widget__title">Contact Info</h3>
+                            <ul class="footer-widget__contact-list list-unstyled">
+                                <li>
+                                    <div class="icon">
+                                        <span class="icon-call"></span>
+                                    </div>
+                                    <p><a href="tel:+91-7989647139">+91-7989647139</a></p>
+                                </li>
+                                <li>
+                                    <div class="icon">
+                                        <span class="icon-envelope"></span>
+                                    </div>
+                                    <p><a href="mailto:drpradeeppilli@gmail.com">drpradeeppilli@gmail.com</a>
+                                    </p>
+                                </li>
+                                <li>
+                                    <div class="icon">
+                                        <span class="icon-pin"></span>
+                                    </div>
+                                    <p>Kothapet(Nuzvid )<br>Andhra Pradesh</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="site-footer__bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="site-footer__bottom-inner">
+                        <div class="site-footer__copyright">
+                            <p class="site-footer__copyright-text">Copywright 2026 by <a href="#">Appzon
+                                    </a>. All
+                                Rights Reserved.</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!--Site Footer End-->
+
+
+
+
+</div>
+<!-- /.page-wrapper -->
+
+
+<div class="mobile-nav__wrapper">
+    <div class="mobile-nav__overlay mobile-nav__toggler"></div>
+    <!-- /.mobile-nav__overlay -->
+    <div class="mobile-nav__content">
+        <span class="mobile-nav__close mobile-nav__toggler"><i class="fa fa-times"></i></span>
+
+        <div class="logo-box">
+            <a href="index.html" aria-label="logo image"><img src="assets/images/resources/logo-2.png" width="130"
+                    alt="" /></a>
+        </div>
+        <!-- /.logo-box -->
+        <div class="mobile-nav__container"></div>
+        <!-- /.mobile-nav__container -->
+
+        <ul class="mobile-nav__contact list-unstyled">
+            <li>
+                <i class="fa fa-envelope"></i>
+                <a href="mailto:drpradeeppilli@gmail.com">drpradeeppilli@gmail.com</a>
+            </li>
+            <li>
+                <i class="fas fa-phone"></i>
+                <a href="tel:+919676321770">+91-7989647139</a>
+            </li>
+        </ul>
+        <!-- /.mobile-nav__contact -->
+        <div class="mobile-nav__top">
+            <div class="mobile-nav__social">
+                <a href="#" class="fab fa-twitter"></a>
+                <a href="#" class="fab fa-facebook-square"></a>
+                <a href="#" class="fab fa-pinterest-p"></a>
+                <a href="#" class="fab fa-instagram"></a>
+            </div>
+            <!-- /.mobile-nav__social -->
+        </div>
+        <!-- /.mobile-nav__top -->
+
+
+
+    </div>
+    <!-- /.mobile-nav__content -->
+</div>
+<!-- /.mobile-nav__wrapper -->
+
+
+
+<a href="#" data-target="html" class="scroll-to-target scroll-to-top">
+    <span class="scroll-to-top__wrapper"><span class="scroll-to-top__inner"></span></span>
+    <span class="scroll-to-top__text"> Go Back Top</span>
+</a>
+
+
+<script src="assets/js/jquery-3.6.0.min.js"></script>
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/jarallax.min.js"></script>
+<script src="assets/js/jquery.ajaxchimp.min.js"></script>
+<script src="assets/js/jquery.appear.min.js"></script>
+<script src="assets/js/swiper.min.js"></script>
+<script src="assets/js/jquery.magnific-popup.min.js"></script>
+<script src="assets/js/jquery.validate.min.js"></script>
+<script src="assets/js/odometer.min.js"></script>
+<!-- <script src="assets/js/wNumb.min.js"></script> -->
+<script src="assets/js/wow.js"></script>
+<script src="assets/js/isotope.js"></script>
+<script src="assets/js/owl.carousel.min.js"></script>
+<!-- <script src="assets/js/jquery-ui.js"></script>
+<script src="assets/js/jquery.nice-select.min.js"></script> -->
+<script src="assets/js/countdown.min.js"></script>
+<script src="assets/js/gsap/gsap.js"></script>
+<script src="assets/js/gsap/ScrollTrigger.js"></script>
+<script src="assets/js/gsap/SplitText.js"></script>
+
+<script src="assets/js/jquery.fancybox.js"></script>
+
+
+
+
+<!-- template js -->
+<script src="assets/js/script.js"></script>
+</body>
+
+</html>

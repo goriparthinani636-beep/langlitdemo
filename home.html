@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> LangLit </title>
+    <!-- favicons Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='images/favicons/favicon.png') }}" />
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='images/favicons/favicon.png') }}" />
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='images/favicons/favicon.png') }}" />
+    <link rel="manifest" href="{{ url_for('static', filename='images/favicons/site.webmanifest') }}" />
+    <meta name="description" content="#" />
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/animate.min.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/custom-animate.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/swiper.min.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/font-awesome-all.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/jquery.magnific-popup.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/odometer.min.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/flaticon.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/owl.carousel.min.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/owl.theme.default.min.css') }}" />
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/fancybox.min.css') }}" />
+
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/module-css/slider.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/module-css/footer.css') }}" />
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/module-css/about.css') }}" /> -->
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/module-css/found.css') }}" /> -->
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/module-css/donate.css') }}" /> -->
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/module-css/who-we-are.css') }}" /> -->
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/module-css/event.css') }}" /> -->
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/module-css/country.css') }}" /> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/module-css/cta.css') }}" />
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/module-css/testimonial.css') }}" /> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/module-css/contact.css') }}" />
+
+
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/module-css/page-header.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/module-css/footer.css') }}" />
+
+    <!-- template styles -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/responsive.css') }}" />
+    <style>
+.about-four {
+    position: relative;
+    display: block;
+    padding: 80px 0px 50px;
+}
+
+    </style>
+</head>
+
+<body class="custom-cursor">
+
+
+
+
+    <div class="custom-cursor__cursor"></div>
+    <div class="custom-cursor__cursor-two"></div>
+
+    <div class="preloader">
+        <div class="preloader__image"></div>
+    </div>
+    <!-- /.preloader -->
+
+
+
+
+
+    <div class="page-wrapper">
+        <header class="main-header">
+            <div class="main-menu__top">
+                <div class="container">
+                    <div class="main-menu__top-inner">
+                        <div class="main-menu__social-box">
+                            <p class="main-menu__social-title">Follow Us On:</p>
+                            <div class="main-menu__social">
+                                <a href="#"><i class="icon-facebook"></i></a>
+                                <a href="#"><i class="icon-twitter"></i></a>
+                                <a href="#"><i class="icon-link-in"></i></a>
+                                <a href="#"><i class="icon-instagram"></i></a>
+                            </div>
+                        </div>
+                        <div class="main-menu__top-right">
+                            <ul class="list-unstyled main-menu__contact-list">
+                                <li>
+                                    <div class="icon">
+                                        <i class="icon-envelope"></i>
+                                    </div>
+                                    <div class="text">
+                                        <p><a href="mailto:drpradeeppilli@gmail.com">drpradeeppilli@gmail.com</a></p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="icon">
+                                        <i class="icon-call"></i>
+                                    </div>
+                                    <div class="text">
+                                        <p><a href="tel:+919676321770">+91-7989647139</a></p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <nav class="main-menu">
+                <div class="main-menu__wrapper">
+                    <div class="container">
+                        <div class="main-menu__wrapper-inner">
+                            <div class="main-menu__left">
+                                <div class="main-menu__logo">
+                                    <a href="index.php"><img src="assets/images/leftlogo.png" alt=""></a>
+                                </div>
+                                <div class="main-menu__main-menu-box">
+                                    <a href="#" class="mobile-nav__toggler d-block d-md-none"><i
+                                            class="fa fa-bars"></i></a>
+                                   <ul class="main-menu__list">
+                                        <li><a href="{{ url_for('home') }}">Home</a></li>
+                                        <li><a href="{{ url_for('about') }}">About Us</a></li>
+                                        <li><a href="{{ url_for('publication_policy') }}">Publication Policy</a></li>
+                                        <li><a href="{{ url_for('pdfs') }}">View Pdf</a></li>
+                                        <li><a href="{{ url_for('previous_issues') }}">Previous Issues</a></li>
+                                        <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
+                                        <li><a href="{{ url_for('events') }}">Photos</a></li>
+                                    </ul>                          
+                                </div>
+                            </div>
+                            
+
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+
+
+
+
+
+<!-- Main Slider Four -->
+<section class="main-slider-four">
+    <div class="swiper-container banner-slider">
+        <div class="swiper-wrapper">
+
+            <!-- Slide Item -->
+            <div class="swiper-slide">
+                <!-- <div class="bg1"></div> -->
+                <div class="image-layer" style="background-image: url(assets/images/slider/slider14.avif);">
+                </div>
+                <div class="main-slider-four__inner">
+                    <div class="main-slider-four__inner-bg"></div>
+                    <div class="container">
+                        <div class="content-box">
+                            <div class="big-title">
+                                <h2>
+                                    Dr.P.Pradeep'S Journal<br>Of Multidiciplinary Research(DPPJMR)
+                                </h2>
+                            </div>
+                            <div class="text-box">
+                                <p>
+                                    An International Peer-Reviewed Open Access Journal
+                                </p>
+                                <br>
+                                <br>
+                                <br>
+                                <br>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide Item -->
+            <div class="swiper-slide">
+                <!-- <div class="bg1"></div> -->
+                <div class="image-layer" style="background-image: url(assets/images/slider/slider13.jpg);">
+                </div>
+                <div class="main-slider-four__inner">
+                    <!-- <div class="main-slider-four__inner-bg"></div> -->
+                    <div class="container">
+                        <div class="content-box">
+                            <div class="big-title">
+                                 <h2>
+                                    Langlit (ISSN 2349-5189) is <br>is an international
+                                </h2>
+                            </div>
+                            <div class="text-box">
+                                <p>
+                                    Peer-reviewed and open acess journal published quarterly from
+                                    latur,Maharashtra,India(August,Novenber,Febuary and May)
+                                </p>
+                                <br>
+                                <br>
+                                <br>
+                                <br>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <ul class="banner-slider-nav-four">
+        <li class="banner-slider-control-four banner-slider-button-prev">
+            <span><i class="icon-arrow-right-two" aria-hidden="true"></i></span>
+        </li>
+        <li class="banner-slider-control-four banner-slider-button-next">
+            <span><i class="icon-arrow-right-two" aria-hidden="true"></i></span>
+        </li>
+    </ul>
+</section>
+<!-- End Main Slider Four -->
+
+<!--About Four Start -->
+<section class="about-four">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-xl-4">
+                <div class="about-four__left">
+                    <div class="fixed-image about-four-img wow slideInLeft" data-wow-delay="50ms" data-wow-duration="1000ms">
+                        <img src="assets/images/resources/contentphoto1.jpg" alt="img">
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-xl-8">
+                <div class="about-four__right section-title text-left sec-title-animation animation-style2">
+                    <h2 class="section-title__title title-animation">Welcome to <br><span>LangLit</span>
+                    </h2>
+                    <div class="text1 wow fadeInUp" data-wow-delay="100ms">
+                        <p>UGC Approved Journal - Arts and Humanities - Serial No. - 4921 & 8131</p>
+                    </div>
+                    <div class="text2 wow fadeInUp" data-wow-delay="200ms">
+                        <p>
+                            <strong>Langlit (ISSN 2349-5189)</strong> is an internation refered, indexed, Peer-Reviewed and open class journal published quaterly from latur, Maharashtra,India
+                            (August,November,February and May). it aims to publish original research articles and enrich research .All Contributions Submitted For publication in the Langlit Have been subjected to a
+                            <strong> rigorous review process by the editorial board and in-house editors</strong>. This journals uses double-blid review, 
+                            Which means that both the review and authors identies are concealed from the reviewers, and vice versa, throughout the review process.
+                            
+                        </p>
+                        <p>
+                            With <strong>Language, Literature, Education, Culture and Humanities.</strong>, The basic purpose of the journal is
+                           to provide a publication platform for the talented young research scholars globally.
+                            <strong>to submit high-quality written works presenting original research with profound ideas and insightful thoughts. It was enlisted in the UGC Approved Journal – Arts and Humanities  –  Serial No. – 49124   &    8131 –   </strong> 
+                        </p>
+                    </div>
+                    <div class="btn-box mt-4">
+                        <a href="{{ url_for('about') }}" class="thm-btn">
+                            About More
+                            <span>
+                                <i class="icon-arrow-right"></i>
+                            </span>
+                        </a>
+                    </div>
+
+
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!--About Four End -->
+
+
+
+
+<!--Slogan One Start -->
+<section class="slogan-one">
+    <div class="slogan-one__bg jarallax" data-jarallax data-speed="0.3" data-imgPosition="100% 100%"
+        style="background-image: url(assets/images/resources/chairman1.jpeg);"></div>
+    <div class="container">
+        <div class="position-relative">
+            <div class="row align-items-center">
+                <div class="col-lg-4 text-center wow zoomInStable" data-wow-delay="20ms">
+                    <img src="assets/images/chairman5.png" class="img-fluid" alt="">
+                </div>
+                <div class="col-lg-8">
+                    <div class="message_content position-relative">
+                        <h5 class="wow fadeInUp" data-wow-delay="100ms">Chairman's Message​</h5>
+                        <h2 class="wow fadeInUp" data-wow-delay="500ms">Dr.P.Pradeep</h2>
+                        <p class="wow fadeInUp" data-wow-delay="600ms">
+                            We believe that strong relationships, a calm learning atmosphere, and overall wellbeing form
+                            the foundation of meaningful education. Our goal is to help every  celebrate their
+                            individuality with confidence, imagination, and kindness.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--Slogan One End -->
+
+
+<!--Why Choose Us Start -->
+<section class="mission-one">
+    <div class="container">
+        <div class="section-title text-center sec-title-animation animation-style2">
+            <div class="section-title__tagline-box">
+                <span class="section-title__tagline">Why choose Us</span>
+            </div>
+            <h2 class="section-title__title title-animation">Why LangLit Stands Out as the Best Place to Publish
+            </h2>
+        </div>
+
+        <div class="row">
+
+            <!-- Single Mission One Start -->
+            <div class="col-xl-4 wow slideInLeft" data-wow-delay="20ms">
+                <div class="single-mission-one">
+                    <div class="icon-box">
+                        <div class="inner-box">
+                            <img src="assets/images/resources/fee.jpg" class="img-fluid" alt="">
+                        </div>
+                    </div>
+                    <div class="content-box">
+                        <div class="text">
+                            <h3>A hand holding a coin with a "slash" through it, or a "Zero Cost" badge.</h3>
+                            <p>"Our team is committed to delivering an exceptional scholarly experience for researchers. With a strong focus on open-access integrity, we ensure that your work is available to the global community without any financial barriers for authors or readers."
+                            </p>
+                        </div>
+                        <!-- <div class="btn-box">
+                                    <a href="#" class="thm-btn">
+                                        Read More
+                                    </a>
+                                </div> -->
+                    </div>
+                </div>
+            </div>
+            <!-- Single Mission One End -->
+            <!-- Single Mission One Start -->
+            <div class="col-xl-4 wow slideInLeft" data-wow-delay="60ms">
+                <div class="single-mission-one">
+                    <div class="icon-box">
+                        <div class="inner-box">
+                            <img src="assets/images/resources/peer.png" class="img-fluid" alt="">
+                        </div>
+                    </div>
+                    <div class="content-box">
+                        <div class="text">
+                            <h3>A document with a magnifying glass or a gold medal on a digital book.</h3>
+                            <p>"E-Content is accepted and published free of cost based strictly on the quality of research. All submissions undergo a rigorous blind peer-review process to maintain the highest academic standards in the fields of Language, Literature, and Humanities."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Single Mission One End -->
+            <!-- Single Mission One Start -->
+            <div class="col-xl-4 wow slideInLeft" data-wow-delay="100ms">
+                <div class="single-mission-one">
+                    <div class="icon-box">
+                        <div class="inner-box">
+                            <img src="assets/images/resources/global.jpg" class="img-fluid" alt="">
+                        </div>
+                    </div>
+                    <div class="content-box">
+                        <div class="text">
+                            <h3>A globe with connecting lines or a group of diverse scholars in a circle.</h3>
+                            <p>"We encourage teachers, scholars, and learners worldwide to exchange original ideas and profound thoughts. LangLit serves as a vibrant platform for innovative writers to bridge the gap between traditional research and contemporary global insights."
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- Single Mission One End -->
+
+        </div>
+    </div>
+</section>
+<!--Mission One End -->
+
+
+
+
+
+
+
+<!--Blog One Start -->
+<section class="testimonials_wrp blog-one--style2">
+    <div class="container">
+        <div class="section-title text-center sec-title-animation animation-style1">
+            <div class="section-title__tagline-box">
+                <span class="section-title__tagline">Testimonials</span>
+            </div>
+            <h2 class="section-title__title title-animation">Voices of Trust</h2>
+            <div class="col-xl-10 m-auto">
+                <p class="testi_subtxt wow slideInUp" data-wow-delay="20ms" data-wow-duration="1000ms">
+                    LangLit excitement and confidence in our vision are
+                    unmistakable.
+                    Listen to what our future parents have to say about their aspirations for their children’s learning
+                    journey:
+                </p>
+            </div>
+
+        </div>
+        <div class="carousel-wrap wow slideInUp" data-wow-delay="50ms" data-wow-duration="1400ms">
+            <div class="testimonial_slide owl-carousel position-relative">
+                <div class="item">
+                    <img src="assets/images/testi2.png">
+                    <div class="about-four-video">
+                        <a class="video-popup" title="Video Gallery" href="https://www.youtube.com/watch?v=9A8ihv9nv60">
+                            <span class="icon-play"></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="assets/images/testi3.png">
+                    <div class="about-four-video">
+                        <a class="video-popup" title="Video Gallery" href="https://www.youtube.com/watch?v=9A8ihv9nv60">
+                            <span class="icon-play"></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="assets/images/testi2.png">
+                    <div class="about-four-video">
+                        <a class="video-popup" title="Video Gallery" href="https://www.youtube.com/watch?v=9A8ihv9nv60">
+                            <span class="icon-play"></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="assets/images/testi3.png">
+                    <div class="about-four-video">
+                        <a class="video-popup" title="Video Gallery" href="https://www.youtube.com/watch?v=9A8ihv9nv60">
+                            <span class="icon-play"></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="assets/images/testi2.png">
+                    <div class="about-four-video">
+                        <a class="video-popup" title="Video Gallery" href="https://www.youtube.com/watch?v=9A8ihv9nv60">
+                            <span class="icon-play"></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="assets/images/testi3.png">
+                    <div class="about-four-video">
+                        <a class="video-popup" title="Video Gallery" href="https://www.youtube.com/watch?v=9A8ihv9nv60">
+                            <span class="icon-play"></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="assets/images/testi2.png">
+                    <div class="about-four-video">
+                        <a class="video-popup" title="Video Gallery" href="https://www.youtube.com/watch?v=9A8ihv9nv60">
+                            <span class="icon-play"></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="assets/images/testi3.png">
+                    <div class="about-four-video">
+                        <a class="video-popup" title="Video Gallery" href="https://www.youtube.com/watch?v=9A8ihv9nv60">
+                            <span class="icon-play"></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="assets/images/testi2.png">
+                    <div class="about-four-video">
+                        <a class="video-popup" title="Video Gallery" href="https://www.youtube.com/watch?v=9A8ihv9nv60">
+                            <span class="icon-play"></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="assets/images/testi3.png">
+                    <div class="about-four-video">
+                        <a class="video-popup" title="Video Gallery" href="https://www.youtube.com/watch?v=9A8ihv9nv60">
+                            <span class="icon-play"></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="assets/images/testi2.png">
+                    <div class="about-four-video">
+                        <a class="video-popup" title="Video Gallery" href="https://www.youtube.com/watch?v=9A8ihv9nv60">
+                            <span class="icon-play"></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="assets/images/testi3.png">
+                    <div class="about-four-video">
+                        <a class="video-popup" title="Video Gallery" href="https://www.youtube.com/watch?v=9A8ihv9nv60">
+                            <span class="icon-play"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--Blog One End -->
+
+
+<!--CTA One Start -->
+<section class="cta-one">
+    <div class="cta-one__bg" style="background-image: url(assets/images/backgrounds/);"></div>
+    <div class="container">
+        <div class="cta-one__inner">
+            <div class="cta-one__title-box sec-title-animation animation-style1">
+                <h2 class="cta-one__title title-animation">Let’s build your 
+                    <br>future together
+                </h2>
+            </div>
+            <div class="cta-one__btn-box">
+                <a href="contact.php" class="cta-one__btn-2 thm-btn">Book an Appointment<span><i
+                            class="icon-arrow-right"></i></span></a>
+            </div>
+        </div>
+    </div>
+</section>
+<!--CTA One End -->
+
+
+<!--Site Footer Start-->
+<footer class="site-footer">
+
+    <div class="site-footer__top">
+        <div class="container">
+            <div class="site-footer__top-inner">
+                <div class="row">
+                    <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="100ms">
+                        <div class="footer-widget__about">
+                            <div class="footer-widget__about-logo main-menu1">
+                                <a href="home.html"><img src="assets/images/f1-logo.png" alt=""></a>
+                            </div>
+                            <p class="footer-widget__about-text">
+                                LangLit blends with excellence. We nurture
+                                young learners in a setting that fosters creativity, critical thinking, and holistic
+                                development.
+                            </p>
+                            <div class="site-footer__social">
+                                <a href="#"><i class="icon-facebook"></i></a>
+                                <a href="#"><i class="icon-twitter"></i></a>
+                                <a href="#"><i class="icon-instagram"></i></a>
+                                <a href="#"><i class="icon-pintarest"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp offset-1" data-wow-delay="300ms">
+                        <div class="footer-widget__links">
+                            <h4 class="footer-widget__title">Links</h4>
+                            <ul class="footer-widget__services-list list-unstyled">
+                                <li><a href="about.html">About Us</a></li>
+                                <li><a href="Publication-policy.html">Publication Policy</a></li>
+                                <li><a href="events.html">Events</a></li>
+                                <li><a href="previous-issuse.html">Previous Issuse</a></li>
+                                <li><a href="contact.html">Contact Us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="400ms">
+                        <div class="footer-widget__contact">
+                            <h3 class="footer-widget__title">Contact Info</h3>
+                            <ul class="footer-widget__contact-list list-unstyled">
+                                <li>
+                                    <div class="icon">
+                                        <span class="icon-call"></span>
+                                    </div>
+                                    <p><a href="tel:+91-7989647139">+91-7989647139</a></p>
+                                </li>
+                                <li>
+                                    <div class="icon">
+                                        <span class="icon-envelope"></span>
+                                    </div>
+                                    <p><a href="mailto:drpradeeppilli@gmail.com">drpradeeppilli@gmail.com</a></p>
+                                </li>
+                                <li>
+                                    <div class="icon">
+                                        <span class="icon-pin"></span>
+                                    </div>
+                                    <p>Kothapet(Nuzvid )<br>Andhra Pradesh</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="site-footer__bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="site-footer__bottom-inner">
+                        <div class="site-footer__copyright">
+                            <p class="site-footer__copyright-text">Copywright 2026 by <a href="#">Appzon
+                                    </a>. All
+                                Rights Reserved.</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!--Site Footer End-->
+
+
+
+
+</div>
+<!-- /.page-wrapper -->
+
+
+<div class="mobile-nav__wrapper">
+    <div class="mobile-nav__overlay mobile-nav__toggler"></div>
+    <!-- /.mobile-nav__overlay -->
+    <div class="mobile-nav__content">
+        <span class="mobile-nav__close mobile-nav__toggler"><i class="fa fa-times"></i></span>
+
+        <div class="logo-box">
+            <a href="index.html" aria-label="logo image"><img src="assets/images/resources/logo-2.png" width="130"
+                    alt="" /></a>
+        </div>
+        <!-- /.logo-box -->
+        <div class="mobile-nav__container"></div>
+        <!-- /.mobile-nav__container -->
+
+        <ul class="mobile-nav__contact list-unstyled">
+            <li>
+                <i class="fa fa-envelope"></i>
+                <a href="mailto:drpradeeppilli@gmail.com">drpradeeppilli@gmail.com</a>
+            </li>
+            <li>
+                <i class="fas fa-phone"></i>
+                <a href="tel:+91-7989647139">+91-7989647139</a>
+            </li>
+        </ul>
+        <!-- /.mobile-nav__contact -->
+        <div class="mobile-nav__top">
+            <div class="mobile-nav__social">
+                <a href="#" class="fab fa-twitter"></a>
+                <a href="#" class="fab fa-facebook-square"></a>
+                <a href="#" class="fab fa-pinterest-p"></a>
+                <a href="#" class="fab fa-instagram"></a>
+            </div>
+            <!-- /.mobile-nav__social -->
+        </div>
+        <!-- /.mobile-nav__top -->
+
+
+
+    </div>
+    <!-- /.mobile-nav__content -->
+</div>
+<!-- /.mobile-nav__wrapper -->
+
+
+
+<a href="#" data-target="html" class="scroll-to-target scroll-to-top">
+    <span class="scroll-to-top__wrapper"><span class="scroll-to-top__inner"></span></span>
+    <span class="scroll-to-top__text"> Go Back Top</span>
+</a>
+
+
+<script src="assets/js/jquery-3.6.0.min.js"></script>
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/jarallax.min.js"></script>
+<script src="assets/js/jquery.ajaxchimp.min.js"></script>
+<script src="assets/js/jquery.appear.min.js"></script>
+<script src="assets/js/swiper.min.js"></script>
+<script src="assets/js/jquery.magnific-popup.min.js"></script>
+<script src="assets/js/jquery.validate.min.js"></script>
+<script src="assets/js/odometer.min.js"></script>
+<!-- <script src="assets/js/wNumb.min.js"></script> -->
+<script src="assets/js/wow.js"></script>
+<script src="assets/js/isotope.js"></script>
+<script src="assets/js/owl.carousel.min.js"></script>
+<!-- <script src="assets/js/jquery-ui.js"></script>
+<script src="assets/js/jquery.nice-select.min.js"></script> -->
+<script src="assets/js/countdown.min.js"></script>
+<script src="assets/js/gsap/gsap.js"></script>
+<script src="assets/js/gsap/ScrollTrigger.js"></script>
+<script src="assets/js/gsap/SplitText.js"></script>
+
+<script src="assets/js/jquery.fancybox.js"></script>
+
+
+
+
+<!-- template js -->
+<script src="assets/js/script.js"></script>
+</body>
+
+</html>

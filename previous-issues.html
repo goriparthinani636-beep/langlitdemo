@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> LangLit </title>
+    <!-- favicons Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='images/favicons/favicon.png') }}" />
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='images/favicons/favicon.png') }}" />
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='images/favicons/favicon.png') }}" />
+    <link rel="manifest" href="{{ url_for('static', filename='images/favicons/site.webmanifest') }}" />
+    <meta name="description" content="#" />
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/animate.min.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/custom-animate.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/swiper.min.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/font-awesome-all.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/jquery.magnific-popup.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/odometer.min.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/flaticon.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/owl.carousel.min.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/owl.theme.default.min.css') }}" />
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/fancybox.min.css') }}" />
+
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/module-css/slider.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/module-css/footer.css') }}" />
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/module-css/about.css') }}" /> -->
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/module-css/found.css') }}" /> -->
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/module-css/donate.css') }}" /> -->
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/module-css/who-we-are.css') }}" /> -->
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/module-css/event.css') }}" /> -->
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/module-css/country.css') }}" /> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/module-css/cta.css') }}" />
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/module-css/testimonial.css') }}" /> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/module-css/contact.css') }}" />
+
+
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/module-css/page-header.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/module-css/footer.css') }}" />
+
+    <!-- template styles -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/responsive.css') }}" />
+    <style>
+.about-four {
+    position: relative;
+    display: block;
+    padding: 80px 0px 50px;
+}
+
+    </style>
+</head>
+
+<body class="custom-cursor">
+
+
+
+
+    <div class="custom-cursor__cursor"></div>
+    <div class="custom-cursor__cursor-two"></div>
+
+    <div class="preloader">
+        <div class="preloader__image"></div>
+    </div>
+    <!-- /.preloader -->
+
+
+
+
+
+    <div class="page-wrapper">
+        <header class="main-header">
+            <div class="main-menu__top">
+                <div class="container">
+                    <div class="main-menu__top-inner">
+                        <div class="main-menu__social-box">
+                            <p class="main-menu__social-title">Follow Us On:</p>
+                            <div class="main-menu__social">
+                                <a href="#"><i class="icon-facebook"></i></a>
+                                <a href="#"><i class="icon-twitter"></i></a>
+                                <a href="#"><i class="icon-link-in"></i></a>
+                                <a href="#"><i class="icon-instagram"></i></a>
+                            </div>
+                        </div>
+                        <div class="main-menu__top-right">
+                            <ul class="list-unstyled main-menu__contact-list">
+                                <li>
+                                    <div class="icon">
+                                        <i class="icon-envelope"></i>
+                                    </div>
+                                    <div class="text">
+                                        <p><a href="mailto:drpradeeppilli@gmail.com">drpradeeppilli@gmail.com</a>
+                                        </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="icon">
+                                        <i class="icon-call"></i>
+                                    </div>
+                                    <div class="text">
+                                        <p><a href="tel:+919676321770">+91-7989647139</a></p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <nav class="main-menu">
+                <div class="main-menu__wrapper">
+                    <div class="container">
+                        <div class="main-menu__wrapper-inner">
+                            <div class="main-menu__left">
+                                <div class="main-menu__logo">
+                                    <a href="index.php"><img src="assets/images/leftlogo.png" alt=""></a>
+                                </div>
+                                <div class="main-menu__main-menu-box">
+                                    <a href="#" class="mobile-nav__toggler d-block d-md-none"><i
+                                            class="fa fa-bars"></i></a>
+                                  <ul class="main-menu__list">
+                                        <li><a href="{{ url_for('home') }}">Home</a></li>
+                                        <li><a href="{{ url_for('about') }}">About Us</a></li>
+                                        <li><a href="{{ url_for('publication_policy') }}">Publication Policy</a></li>
+                                        <li><a href="{{ url_for('pdfs') }}">View Pdf</a></li>
+                                        <li><a href="{{ url_for('previous_issues') }}">Previous Issues</a></li>
+                                        <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
+                                        <li><a href="{{ url_for('events') }}">Photos</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <div class="stricky-header stricked-menu main-menu">
+            <div class="sticky-header__content"></div>
+            <!-- /.sticky-header__content -->
+        </div>
+           <!-- /.stricky-header -->
+
+
+<div class="main-container">
+        <div class="container">
+            <h1>Previous Issues</h1>
+            <div class="table">
+        <table border="1">
+  <tr>
+    <th>Sl.No</th>
+    <th>NAME OF VOLUMES</th>
+    <th>NAME OS ISSUES</th>
+    <th>FULL ACCESS</a></th>
+  </tr>
+
+  <tr>
+    <td>1</td>
+    <td>Volume-1</td>
+    <td>Issue-1[2014-15]</td>
+    <td><a href="#">Click Here</a></td>
+  </tr>
+
+  <tr>
+    <td>2</td>
+    <td>Volume-1</td>
+    <td>Issue-2[2014-15]</td>
+    <td><a href="#">Click Here</a></td>
+  </tr>
+
+  <tr>
+    <td>3</td>
+    <td>Volume-1</td>
+    <td>Issue-3[2014-15]</td>
+    <td><a href="#">Click Here</a></td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>Volume-1</td>
+    <td>Issue-4[2014-15]</td>
+    <td><a href="#">Click Here</a></td>
+  </tr>
+    <tr>
+    <td>5</td>
+    <td>Volume-2</td>
+    <td>Issue-2[2015-16]</td>
+    <td><a href="#">Click Here</a></td>
+    </tr>
+
+</table>
+        </div>
+
+        <div class="special">
+            <h1>Special Issues</h1>
+             <div class="table">
+        <table border="1">
+  <tr>
+    <th>Sl.No</th>
+    <th>NAME OF THE SPECIAL ISSUES</th>
+    <th>NAME OF COLLEGE</th>
+    <th>FULL ACCESS</a></th>
+  </tr>
+
+  <tr>
+    <td>1</td>
+    <td>BCUD, SP Pune University Sponsored State Level Seminar on Enriching Communicative Competence</td>
+    <td>Department of English, Varvand Gram Shikshan Sanstha’s, Eknath Sitaram Divekar College, Varvand (Pune) On 14th & 15th December 2018</td>
+    <td>1. Cover Page<br>
+        2. Contents<br>
+        3. Articles</a></td>
+  </tr>
+
+  <tr>
+    <td>2</td>
+    <td>UGC Sponsored National Conference on Tribal in Indian English Novels</td>
+    <td>Department of English, Shikshan Prasarak Mandal’s NABIRA MAHAVIDYALAYA, KATOL on 15th  & 16th  March, 2019</td>
+    <td>1. Cover Page<br>
+        2. Front Pages<br>
+        3. Contents<br>
+        4. Articles</td>
+  </tr>
+
+  <tr>
+    <td>3</td>
+    <td>National Conference on FROM PERIPHERY TO CENTER:EXPLORING CULTURE, LITERATURE AND MEDIA</td>
+    <td>Department of English, Sasurie College of Arts & Science (Affiliated to Bharathiar University, Coimbatore) Vijayamangalam, Tiruppur on 6th Feburary 2019</td>
+    <td>1. Cover Page<br>
+        2. Contents<br>
+        3. Articles</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>International Conference on Inter-Survival Dynamics of Language, Literature and Translation</td>
+    <td>Department of English,PG & Research Department of English Thiruvalluvar, Government Arts College, Rasipuram on 22nd August 2019</td>
+    <td>1. Cover Page
+        2. Messages<br>
+        3. Contents-I<br>
+        4. Articles  -I<br>
+        5.Contents-II<br>
+        6. Articles – II</a></td>
+  </tr>
+    <tr>
+    <td>5</td>
+    <td>National Conference on New Directions in English Language Teaching at the U.G. Level</td>
+    <td>Department of English,Kakatiya Government College, Hanamkonda Reaccredited with ‘A’ Grade by NAAC: Estd.1972  Affiliated to Kakatiya University, Warangal Telangana State – 506 001, India</td>
+    <td>1. Cover Page<br>
+        2. Second  Page<br>
+        3. Editors′ Note<br>
+        4. Articles</a></td>
+    </tr>
+
+</table>
+        </div>
+        </div>
+    </div>    
+
+        
+
+
+
+        <!--Site Footer Start-->
+<!--Site Footer Start-->
+<footer class="site-footer">
+
+    <div class="site-footer__top">
+        <div class="container">
+            <div class="site-footer__top-inner">
+                <div class="row">
+                    <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="100ms">
+                        <div class="footer-widget__about">
+                            <div class="footer-widget__about-logo main-menu1">
+                                <a href="home.html"><img src="assets/images/f1-logo.png" alt=""></a>
+                            </div>
+                            <p class="footer-widget__about-text">
+                                LangLit blends with excellence. We nurture
+                                young learners in a setting that fosters creativity, critical thinking, and holistic
+                                development.
+                            </p>
+                            <div class="site-footer__social">
+                                <a href="#"><i class="icon-facebook"></i></a>
+                                <a href="#"><i class="icon-twitter"></i></a>
+                                <a href="#"><i class="icon-instagram"></i></a>
+                                <a href="#"><i class="icon-pintarest"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp offset-1" data-wow-delay="300ms">
+                        <div class="footer-widget__links">
+                            <h4 class="footer-widget__title">Links</h4>
+                            <ul class="footer-widget__services-list list-unstyled">
+                                <li><a href="about.html">About Us</a></li>
+                                <li><a href="Publication-policy.html">Publication Policy</a></li>
+                                <li><a href="events.html">Events</a></li>
+                                <li><a href="previous-issuse.html">Previous Issuse</a></li>
+                                <li><a href="contact.html">Contact Us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="400ms">
+                        <div class="footer-widget__contact">
+                            <h3 class="footer-widget__title">Contact Info</h3>
+                            <ul class="footer-widget__contact-list list-unstyled">
+                                <li>
+                                    <div class="icon">
+                                        <span class="icon-call"></span>
+                                    </div>
+                                    <p><a href="tel:+91-7989647139">+91-7989647139</a></p>
+                                </li>
+                                <li>
+                                    <div class="icon">
+                                        <span class="icon-envelope"></span>
+                                    </div>
+                                    <p><a href="mailto:drpradeeppilli@gmail.com">drpradeeppilli@gmail.com</a>
+                                    </p>
+                                </li>
+                                <li>
+                                    <div class="icon">
+                                        <span class="icon-pin"></span>
+                                    </div>
+                                    <p>Kothapet(Nuzvid )<br>Andhra Pradesh</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="site-footer__bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="site-footer__bottom-inner">
+                        <div class="site-footer__copyright">
+                            <p class="site-footer__copyright-text">Copywright 2026 by <a href="#">Appzon
+                                    </a>. All
+                                Rights Reserved.</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!--Site Footer End-->
+<!--Site Footer End-->
+
+
+
+
+</div>
+<!-- /.page-wrapper -->
+
+
+<div class="mobile-nav__wrapper">
+    <div class="mobile-nav__overlay mobile-nav__toggler"></div>
+    <!-- /.mobile-nav__overlay -->
+    <div class="mobile-nav__content">
+        <span class="mobile-nav__close mobile-nav__toggler"><i class="fa fa-times"></i></span>
+
+        <div class="logo-box">
+            <a href="index.html" aria-label="logo image"><img src="assets/images/resources/logo-2.png" width="130"
+                    alt="" /></a>
+        </div>
+        <!-- /.logo-box -->
+        <div class="mobile-nav__container"></div>
+        <!-- /.mobile-nav__container -->
+
+        <ul class="mobile-nav__contact list-unstyled">
+            <li>
+                <i class="fa fa-envelope"></i>
+                <a href="mailto:drpradeeppilli@gmail.com">drpradeeppilli@gmail.com</a>
+            </li>
+            <li>
+                <i class="fas fa-phone"></i>
+                <a href="tel:+91-7989647139">+91-7989647139</a>
+            </li>
+        </ul>
+        <!-- /.mobile-nav__contact -->
+        <div class="mobile-nav__top">
+            <div class="mobile-nav__social">
+                <a href="#" class="fab fa-twitter"></a>
+                <a href="#" class="fab fa-facebook-square"></a>
+                <a href="#" class="fab fa-pinterest-p"></a>
+                <a href="#" class="fab fa-instagram"></a>
+            </div>
+            <!-- /.mobile-nav__social -->
+        </div>
+        <!-- /.mobile-nav__top -->
+
+
+
+    </div>
+    <!-- /.mobile-nav__content -->
+</div>
+<!-- /.mobile-nav__wrapper -->
+
+
+
+<a href="#" data-target="html" class="scroll-to-target scroll-to-top">
+    <span class="scroll-to-top__wrapper"><span class="scroll-to-top__inner"></span></span>
+    <span class="scroll-to-top__text"> Go Back Top</span>
+</a>
+
+
+<script src="assets/js/jquery-3.6.0.min.js"></script>
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/jarallax.min.js"></script>
+<script src="assets/js/jquery.ajaxchimp.min.js"></script>
+<script src="assets/js/jquery.appear.min.js"></script>
+<script src="assets/js/swiper.min.js"></script>
+<script src="assets/js/jquery.magnific-popup.min.js"></script>
+<script src="assets/js/jquery.validate.min.js"></script>
+<script src="assets/js/odometer.min.js"></script>
+<!-- <script src="assets/js/wNumb.min.js"></script> -->
+<script src="assets/js/wow.js"></script>
+<script src="assets/js/isotope.js"></script>
+<script src="assets/js/owl.carousel.min.js"></script>
+<!-- <script src="assets/js/jquery-ui.js"></script>
+<script src="assets/js/jquery.nice-select.min.js"></script> -->
+<script src="assets/js/countdown.min.js"></script>
+<script src="assets/js/gsap/gsap.js"></script>
+<script src="assets/js/gsap/ScrollTrigger.js"></script>
+<script src="assets/js/gsap/SplitText.js"></script>
+
+<script src="assets/js/jquery.fancybox.js"></script>
+
+
+
+
+<!-- template js -->
+<script src="assets/js/script.js"></script>
+</body>
+
+</html>
